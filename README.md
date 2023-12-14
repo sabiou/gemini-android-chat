@@ -1,0 +1,1 @@
+testing out the Gemini ai within Android
