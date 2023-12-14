@@ -4,6 +4,7 @@ import java.util.Properties
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
 android {
@@ -21,20 +22,6 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-
-        //load the values from .properties file
-        val keystoreFile = project.rootProject.file("key.properties")
-        val properties = Properties()
-        properties.load(keystoreFile.inputStream())
-
-        //return empty key in case something goes wrong
-        val apiKey = properties.getProperty("GOOGLE_AI_API_KEY") ?: ""
-
-        buildConfigField(
-            type = "String",
-            name = "API_KEY",
-            value = apiKey
-        )
     }
 
     buildTypes {

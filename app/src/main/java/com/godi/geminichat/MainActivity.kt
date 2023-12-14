@@ -185,7 +185,7 @@ fun GeminiChatScreen(
             items(conversations.size) { index ->
                 val conversation = conversations[index]
                 ChatBubble(
-                    isFromMe = conversation.first == "received",
+                    isFromMe = conversation.first == "sent",
                     content = conversation.second,
                     modifier = Modifier
                         .fillMaxWidth()

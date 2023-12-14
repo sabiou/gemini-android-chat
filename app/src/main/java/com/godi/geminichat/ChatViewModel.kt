@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class ChatViewModel : ViewModel() {
     // set your API key here
-    private val apiKey = BuildConfig.API_KEY
+    private val apiKey = BuildConfig.GOOGLE_AI_API_KEY
 
     private val generativeModel by lazy {
         GenerativeModel(
