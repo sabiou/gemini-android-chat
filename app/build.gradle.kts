@@ -66,6 +66,7 @@ dependencies {
     implementation("androidx.compose.material3:material3")
     // google generative ai client
     implementation("com.google.ai.client.generativeai:generativeai:0.1.1")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
